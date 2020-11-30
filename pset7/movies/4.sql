@@ -1,0 +1,1 @@
+SELECT count(*) AS Count_of_Ten_Point_Movies from ratings WHERE rating = 10.0;

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    {% if method != "POST" %}
+        <p class="font-weight-bold">{{ message }}</p>
+        <form action="/quote" method="POST">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Company Symbol" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Quote</button>
+        </form>
+    {% else %}
+        <p class="font-weight-bold">
+            {{ 'A share of "{name} ({symbol})" costs '.format(name=name, symbol=symbol) }} {{ "${:,.2f}.".format(price) }}
+        </p>
+        <p class="lead"><a href="/buy">Buy Some Shares</a> // <a href="/quote">Quote Another</a></p>
+    {% endif %}
+{% endblock %}

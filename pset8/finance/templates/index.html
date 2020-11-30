@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ho
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in shareKinds %}
+                <tr>
+                    <th scope="row">{{ row["symbol"] }}</th>
+                    <td>{{ row["name"] }}</td>
+                    <td>{{ row["shares"] }}</td>
+                    <td class="text-right">{{ "${:,.2f}".format(row["price"]) }}</td>
+                    <td class="text-right">{{ "${:,.2f}".format(row["price"]*row["shares"]) }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <th scope="row">CASH</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="text-right">{{ "${:,.2f}".format(cash) }}</td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th class="text-right">{{ "${:,.2f}".format(sharesValue+cash) }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--<img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://st.depositphotos.com/1454700/1278/i/450/depositphotos_12788252-stock-photo-open-gates-and-wall.jpg" title="{{ top }}">-->
+{% endblock %}

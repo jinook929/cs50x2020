@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Register</h1>
+    
+    <form action="/register" method="POST">
+        <input id="name" name="name" type="text" placeholder="Name">
+        <input id="email" name="email" type="text" placeholder="Email Address">
+        <input id="submit" type="submit"> <!-- disabled> -->
+    </form>
+    
+    <a href="/">Go to Main</a>
+    
+    <script>
+        // document.querySelector("#name").onkeyup = function() {
+        //     if (document.querySelector("#name").value == "" || document.querySelector("#email").value == "")
+        //     {
+        //         document.querySelector("#submit").disabled = true;
+        //     }
+        //     else
+        //     {
+        //         document.querySelector("#submit").disabled = false;
+        //     }
+        // }
+        // document.querySelector("#email").onkeyup = function() {
+        //     if (document.querySelector("#name").value == "" || document.querySelector("#email").value == "")
+        //     {
+        //         document.querySelector("#submit").disabled = true;
+        //     }
+        //     else
+        //     {
+        //         document.querySelector("#submit").disabled = false;
+        //     }
+        // }
+    </script>
+{% endblock %}

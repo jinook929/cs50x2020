@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    {% if method != "POST" %}
+        {% if message %}
+            <p class="font-weight-bold">{{ message }}</p>
+        {% endif %}
+        <form action="/buy" method="POST">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Company Symbol" type="text">
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Shares" type="number">
+            </div>
+            <button class="btn btn-primary" type="submit">Buy</button>
+        </form>
+    {% else %}
+        <p class="font-weight-bold">
+            {{ '{shares} share(s) of "{name} ({symbol})" bought at ${total} [{dt_string}]'.format(name=name, symbol=symbol, shares=shares, total=total, dt_string=dt_string) }}
+        </p>
+        <p class="lead"><a href="/">Back to Home</a> // <a href="/buy">Buy More</a></p>
+    {% endif %}
+{% endblock %}

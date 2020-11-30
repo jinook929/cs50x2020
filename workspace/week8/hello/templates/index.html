@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div>
+        Hello, {{ name }}!
+    </div>
+    <div>
+        Your random number is {{ rNumber }}.
+    </div>
+    <div>
+        {% if number == 1 %}
+            Your coin flip is HEADS.
+        {% else %}
+            Your coin flip is TAILS.
+        {% endif %}
+    </div>
+    
+    <form action="/hello">
+        <input name="name" type="text">
+        <input type="submit">
+    </form>
+{% endblock %}

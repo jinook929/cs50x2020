@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}ToDos{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">THINGS TO DO</h1>
+    
+    <button type="button" class="btn btn-primary" onclick="newTask()">New Task</button>
+
+    <ul id="list" class="list-group"></ul>
+
+    <div id="removeExplanation" class="container">
+        <div> &diams; Click a To-Do to remove it from the list.</div>
+        <div><button type="button" class="btn btn-warning" onclick="clearAll()">Remove All</button></div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{{url_for('static', filename='myscripts.js')}}"></script>
+    <script>resumeList();</script>
+{% endblock %}

@@ -1,0 +1,114 @@
+/*General*/
+body {
+    padding: 10px;
+}
+
+#top, #bottom, .header {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5em;
+}
+
+.elementPicFrame {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.elementPic {
+    background-image: url('https://cdn.pixabay.com/photo/2020/06/24/12/03/avatar-5335927_960_720.png');
+}
+
+.backToMain {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.links:hover {
+    text-decoration: none;
+}
+
+.active {
+    color: blue!important;
+}
+
+/*Main Page*/
+#middle {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#mainImg {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Fire Page*/
+.fireImg {
+    height: 285px;
+    width: 285px;
+    display: inline-block;
+    background-position: 0 0;
+}
+
+#fireArt {
+    position: relative;
+    width: 100%;
+}
+
+#fireClip {
+    position: absolute;
+    z-index: -1;
+}
+
+#fireLetter {
+    background-color: white;
+    width: 100%;
+    height: 375px;
+    letter-spacing: 2px;
+    font-size: 20rem;
+    font-weight:bold;
+    color: rgba(14, 14, 14, 0.6);
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    opacity:50;
+    text-align: center;
+    z-index: 1000;
+}
+
+/*Water Page*/
+.waterImg {
+    height: 285px;
+    width: 285px;
+    display: inline-block;
+    background-position: 285px 285px;
+}
+
+#waterInBody {
+    display: flex;
+    justify-content: center;
+}
+
+/*Earth Page*/
+.earthImg {
+    height: 285px;
+    width: 285px;
+    display: inline-block;
+    background-position: 0 285px;
+}
+
+/*Air Page*/
+.airImg {
+    height: 285px;
+    width: 285px;
+    display: inline-block;
+    background-position: 285px 0;
+}
+
+table {
+    margin-top: 50px;
+}

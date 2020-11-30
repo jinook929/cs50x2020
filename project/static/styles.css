@@ -1,0 +1,88 @@
+/*Common Settings*/ 
+body {
+    padding: 10px;
+}
+
+h1 {
+    padding: 20px;
+    margin: 20px;
+}
+
+input[type="search"], input[type="text"]{  
+    text-align: center; 
+} 
+
+.footer {
+    position: relative;
+    bottom: 0;
+    font-size: .75em;
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    background-color: #f5f5f5;
+}
+
+/*Main Page*/
+#main-pic {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+}
+
+div>h3 {
+    margin: 20px auto 15px;
+}
+
+.intro { 
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#bootstrap-overrides #intro-p { 
+    font-size: 1.2em;
+    text-indent: 35px;
+}
+
+/*ToDos Page*/
+button {
+    margin: 25px;
+}
+
+#list li{
+    cursor: pointer;
+}
+
+#removeExplanation {
+    margin-left: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Converters Page*/
+.converter {
+    padding: 15px;
+}
+
+hr {
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+/*media query for navbar*/
+@media only screen and (max-width: 990px) {
+    .nav-item {    
+        text-align: center;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+    }
+}

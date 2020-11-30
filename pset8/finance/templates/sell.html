@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    {% if method != "POST" %}
+
+        <form action="/sell" method="POST">
+            <select id="selectMenu" name="symbol" class="custom-select">
+                <option selected>Choose Your Stock</option>
+                {% for row in shareKinds %}
+                    <option value="{{ row['symbol'] }}">{{ row["symbol"] }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Shares" type="number">
+            </div>
+            <button class="btn btn-primary" type="submit">Sell</button>
+        </form>
+    {% else %}
+        <p class="font-weight-bold">
+            {{ '{shares} share(s) of "{name} ({symbol})" sold at ${total} [{dt_string}]'.format(name=name, symbol=symbol, shares=shares, total=total, dt_string=dt_string) }}
+        </p>
+        <p class="lead"><a href="/">Back to Home</a> // <a href="/sell">Sell More</a></p>
+    {% endif %}
+{% endblock %}

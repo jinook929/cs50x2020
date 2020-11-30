@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block title %}Converters{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">CONVERTERS</h1>
+    
+    <h3 class="text-center">Length Converters</h3>
+    
+    <div class="converter container">
+        <div class="row justify-content-center">
+            <div class="col-3 text-center">
+                <input id="cmInput" type="text" placeholder="Centimeters" size="8" oninput="converterCmToInch(this.id,this.value)" onchange="converterCmToInch(this.id,this.value)"> cm
+            </div>
+            <div class="col-1 text-center">
+                <span>
+                    <svg width="20" height="20" viewBox="0 0 16 16" class="bi bi-arrow-left-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                    </svg>
+                </sapn>
+            </div>
+            <div class="col-6 text-center">
+                <input id="inchInput" type="text" placeholder="Inches" size="8" oninput="converterCmToInch(this.id,this.value)" onchange="converterCmToInch(this.id,this.value)"> inch&lpar;es&rpar;
+            </div>
+        </div>            
+    </div>
+    
+    <div class="converter container">
+        <div class="row justify-content-center">
+            <div class="col-3 text-center">
+                <input id="cmInput_" type="text" placeholder="Centimeters" size="8" oninput="converterCmToFootInch(this.id,this.value)" onchange="converterCmToFootInch(this.id,this.value)"> cm
+            </div>
+            <div class="col-1 text-center">
+                <span>
+                    <svg width="20" height="20" viewBox="0 0 16 16" class="bi bi-arrow-left-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                    </svg>
+                </sapn>
+            </div>
+            <div class="col-3 text-center">
+                <input id="footInput_" type="text" placeholder="Feet" size="8" oninput="converterCmToFootInch(this.id,this.value)" onchange="converterCmToFootInch(this.id,this.value)"> foot &lpar; or feet&rpar;
+            </div>
+            <div class="col-3 text-center">
+                <input id="inchInput_" type="text" placeholder="Inches" size="8" oninput="converterCmToFootInch(this.id,this.value)" onchange="converterCmToFootInch(this.id,this.value)"> inch&lpar;es&rpar;
+            </div>
+        </div>            
+    </div>
+            
+    <div class="converter container">
+        <div class="row justify-content-center">
+            <div class="col-3 text-center">
+                <input id="mInput" type="text" placeholder="Meters" size="8" oninput="converterMToYard(this.id,this.value)" onchange="converterMToYard(this.id,this.value)"> m
+            </div>
+            <div class="col-1 text-center">
+                <span>
+                    <svg width="20" height="20" viewBox="0 0 16 16" class="bi bi-arrow-left-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                    </svg>
+                </sapn>
+            </div>
+            <div class="col-6 text-center">
+                <input id="yardInput" type="text" placeholder="Yards" size="8" oninput="converterMToYard(this.id,this.value)" onchange="converterMToYard(this.id,this.value)"> yard&lpar;s&rpar;
+            </div>
+        </div>            
+    </div>
+    
+    <div class="converter container">
+        <div class="row justify-content-center">
+            <div class="col-3 text-center">
+                <input id="kmInput" type="text" placeholder="Kilometers" size="8" oninput="converterKmToMile(this.id,this.value)" onchange="converterKmToMile(this.id,this.value)"> km
+            </div>
+            <div class="col-1 text-center">
+                <span>
+                    <svg width="20" height="20" viewBox="0 0 16 16" class="bi bi-arrow-left-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                    </svg>
+                </sapn>
+            </div>
+            <div class="col-6 text-center">
+                <input id="mileInput" type="text" placeholder="Miles" size="8" oninput="converterKmToMile(this.id,this.value)" onchange="converterKmToMile(this.id,this.value)"> mile&lpar;s&rpar;
+            </div>
+        </div>            
+    </div>
+    
+    <br>
+    
+    <h3 class="text-center">Weight Converter</h3>
+
+    <div class="converter container">
+        <div class="row justify-content-center">
+            <div class="col-3 text-center">
+                <input id="kgInput" type="text" placeholder="Kilograms" size="8" oninput="converterKgToPound(this.id,this.value)" onchange="converterKgToPound(this.id,this.value)"> kg
+            </div>
+            <div class="col-1 text-center">
+                <span>
+                    <svg width="20" height="20" viewBox="0 0 16 16" class="bi bi-arrow-left-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                    </svg>
+                </sapn>
+            </div>
+            <div class="col-6 text-center">
+                <input id="poundInput" type="text" placeholder="Pounds" size="8" oninput="converterKgToPound(this.id,this.value)" onchange="converterKgToPound(this.id,this.value)"> pound&lpar;s&rpar;
+            </div>
+        </div>            
+    </div>
+    
+    <br>
+    
+    <h3 class="text-center">Temperature Converter</h3>
+
+    <div class="converter container">
+        <div class="row justify-content-center">
+            <div class="col-3 text-center">
+                <input id="cInput" type="text" placeholder="Celsius" size="8" oninput="converterCToF(this.id,this.value)" onchange="converterCToF(this.id,this.value)"> °C
+            </div>
+            <div class="col-1 text-center">
+                <span>
+                    <svg width="20" height="20" viewBox="0 0 16 16" class="bi bi-arrow-left-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                    </svg>
+                </sapn>
+            </div>
+            <div class="col-6 text-center">
+                <input id="fInput" type="text" placeholder="Fahrenheit" size="8" oninput="converterCToF(this.id,this.value)" onchange="converterCToF(this.id,this.value)"> °F
+            </div>
+        </div>            
+    </div>
+
+    <br> 
+{% endblock %}
+
+{% block script %}
+    <script src="{{url_for('static', filename='myscripts.js')}}"></script>
+{% endblock %}

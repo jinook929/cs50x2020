@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <th scope="row">{{ row["symbol"] }}</th>
+                    <td>{{ row["shares"] }}</td>
+                    <td class="text-right">{{ "${:,.2f}".format(row["price"]) }}</td>
+                    <td>{{ row["transacted"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!--<img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://st.depositphotos.com/1454700/1278/i/450/depositphotos_12788252-stock-photo-open-gates-and-wall.jpg" title="{{ top }}">-->
+{% endblock %}

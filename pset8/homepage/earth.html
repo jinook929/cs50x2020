@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>
+            Water
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <a class="links" href="water.html">WATER</a>
+            <a class="links active" href="#">EARTH</a>
+            <a class="links" href="fire.html">FIRE</a>
+            <a class="links" href="air.html">AIR</a>
+        </div>
+        
+        <div class="elementPicFrame">
+            <div class="elementPic earthImg"></div>
+        </div>
+        
+        <div class="backToMain">
+            <a class="btn btn-warning" href="index.html" role="button">Back to Main</a>
+        </div>
+                
+        <div class="container lead">
+            <p>
+                Earth is full of what we do not know as well as what we know. Explore it virtually with the satelite map below. Drag to move the map and scroll up or down, holding CTRL key, to zoom in or out.
+            </p>
+        </div>
+        
+        <div class="mapouter mx-auto">
+            <div class="gmap_canvas">
+                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <a href="https://www.embedgooglemap.net"></a>
+            </div>
+            <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+    </div>
+
+    </body>
+</html>
